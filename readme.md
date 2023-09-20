@@ -14,3 +14,11 @@ with this task we tried building an aplication *Ojek online* which allowed the u
 *tampilan login*
 
 ![](Login)
+
+*tampilan registrasi*
+
+![](Register)
+
+*tampilan pesanan*
+
+![](Order)
