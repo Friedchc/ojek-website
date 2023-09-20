@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>Member Registration</title>
+    <link type="text/css" rel="stylesheet" href="css/style_register.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+    <script src="script.js"></script>
+    <script src="scripts/check.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
+</head>
+
+<body>
+<style type="text/css">
+  body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  background-image: url("city.jpg");
+
+
+  min-height: 1000px;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  margin-right:550px;
+  margin-top: 70px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+  opacity: 0.8;
+}
+.bg-img {
+  border-radius: 50%;
+  opacity: 0.9;
+}
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  transition: 200ms background-color ease-in-out;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+.facebook {
+  background-color: #4267b2;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.google {
+  background-color: #db4437;
+}
+</style>
+
+<div class="bg-img">
+    <form class="container">
+    <div class="form">
+        <div class="header">
+           <p>Sign In</p> 
+        </div>
+        <div>
+            <form class="login-form" name="form" method="POST">
+                <div type="text">
+                    <p>Your Name :</p>
+                    <input id="name" type="text" name="full_name" />
+                </div>
+                <div type="text">
+                    <p>Username :</p>
+                    <input id="username" type="text" name="username" onkeyup="check_user(this.value)"  />
+                    <div id="cek_user"><span id="check_user" style="display:inline;"></span></div>
+                </div>
+                <div type="text">
+                    <p>Email :</p>
+                    <input id="email" type="email" name="email" onkeyup="check_email(this.value)" />
+                    <div id="cek_email"><span id="check_email" style="display:inline;"></span></div>
+                </div>
+                <div type="text">
+                    <p>Password :</p>
+                    <input id="password" type="password" name="password"  />
+                </div>
+                <div type="text">
+                    <p>Confirm Password :</p>
+                    <input id="confirm" type="password" name="confirm" />    
+                </div>
+                <div type="text">
+                    <p>Phone Number :</p>
+                    <input id="phone" type="text" name="phone"  />
+                </div>
+                <div class="input" id="check">
+                    <input id="isDriver" type="checkbox" name="isDriver" value="Yes"> 
+                    <p class="driver">sign up as a driver</p>
+                </div>
+                <div class="btn">
+                        <button type="submit" id="submit_btn" name="submit" formaction="order.html">Register</button>   
+                        <a class="message" href="gojek.html">Login</a>
+ 
+                </div>
+                
+            </form>
+               <div id="icon-container">
+          <div class="icons facebook">
+            <i class="fa fa-facebook"></i>
+          </div>
+          <div class="icons twitter">
+            <i class="fa fa-twitter"></i>
+          </div>
+          <div class="icons google">
+            <i class="fa fa-google"></i>
+        </div>
+    </div>  
+    </form>
+</div>
+</body>
+</html>
